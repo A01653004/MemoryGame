@@ -3,7 +3,8 @@ from turtle import *
 from freegames import path
 
 car = path('car.gif')
-tiles = list(range(32)) * 2
+#Cambio de innovación al juego, se cambiaron los dígitos para que al usuario le ayude a tener mejor memoria
+tiles = ["▼", "▲", "✉", "✔", "☣", "⌘", "⌛", "☁", "✪", "➳", "✿", "⚡", "M", "☃", "☂", "✄", "∞", "✫", "♚", "☏", "❢", "☬", "♡", " ☺ ", "✺", "✦", "☩", "♪", "♬", "✪", "✹", "☢"] * 2
 state = {'mark': None}
 hide = [True] * 64
 global cont_
@@ -70,9 +71,11 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        #Se centran los dígitos en los cuadros 
+        goto(x + 25, y)
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        #Se escribe la propiedad para alinear los números
+        write(tiles[mark], align = "center", font=('Arial', 30, 'normal'))
         
     
     update()
