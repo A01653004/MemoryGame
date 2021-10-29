@@ -47,7 +47,7 @@ def tap(x, y):
         state['mark'] = None
         cont_ +=1
         
-        if cont_ == 31:
+        if cont_ == 32:
             print("Felicidades!")
     
     
